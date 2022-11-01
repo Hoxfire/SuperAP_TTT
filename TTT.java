@@ -2,34 +2,30 @@ import pkg.*;
 import java.util.ArrayList;
 
 public class TTT implements GameState {
-	int [] [] moves = new int[3][3];
-	Player winner = null;
-	boolean isGameOver() {
-	
+	public static int[][] board = new int[3][3];
+	public boolean isGameOver() {
+
 	}
-	Player getWinner() {
-		if(!isGameOver) {
-			if(winner==Player1) {
-				return Player1;
-			}
-			else if(winner==Player2) {
-				return Player2;
-			}
-			else {
-				return null;
+	public Player getWinner() {
+
+	}
+	public Player getCurrentPlayer() {
+
+	}
+	public ArrayList<String> getCurrentMoves() {
+
+	}
+	public void makeMove(String move) {
+
+	}
+	public String toString() {
+		String s = "";
+		for(int[] i: board) {
+			s=s+"\n";
+			for(int j: i) {
+				s=s+j;
 			}
 		}
-	}
-	Player getCurrentPlayer() {
-
-	}
-	ArrayList<String> getCurrentMoves() {
-
-	}
-	void makeMove(String move) {
-
-	}
-	String toString() {
-
+		return s;
 	}
 }
