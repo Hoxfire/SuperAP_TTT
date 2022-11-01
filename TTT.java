@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class TTT implements GameState {
 	int [] [] moves = new int[3][3];
+	Player winner = null;
 	boolean isGameOver() {
 	
 	}
