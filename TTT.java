@@ -3,6 +3,9 @@ import java.util.ArrayList;
 
 public class TTT implements GameState {
 	public static int[][] board = new int[3][3];
+	static Player winner = null;
+	static Player Player1 = new Player();
+	static Player Player2 = new Player();
 	public boolean isGameOver() {
 		for(int i = 0; i<board.length; i++) {
 			if(board[i][0] == 1 && board[i][1] == 1 && board[i][2] == 1) {
@@ -41,7 +44,9 @@ public class TTT implements GameState {
 		return false;
 	}
 	public Player getWinner() {
-
+		if(isGameOver) {
+			return this.winner;
+		}
 	}
 	public Player getCurrentPlayer() {
 
