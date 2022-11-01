@@ -55,7 +55,15 @@ public class TTT implements GameState {
 		}
 	}
 	public ArrayList<String> getCurrentMoves() {
-
+		ArrayList<String> valid = new ArrayList<String>();
+		for(int i = 0; i<board.length; i++) {
+			for(int j = 0; j<board[0].length; j++) {
+				if(board[i][j] == 0) {
+					valid.add("("+String.valueOf(i) +"," + String.valueOf(j)+")");
+				}
+			}
+		}
+		return valid;
 	}
 	public void makeMove(String move) {
 
