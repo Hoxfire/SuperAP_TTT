@@ -6,6 +6,7 @@ public class TTT implements GameState {
 	static Player winner = null;
 	static Player Player1 = new Player();
 	static Player Player2 = new Player();
+	static Player whosMove = Player1;
 	public boolean isGameOver() {
 		for(int i = 0; i<board.length; i++) {
 			if(board[i][0] == 1 && board[i][1] == 1 && board[i][2] == 1) {
@@ -49,7 +50,9 @@ public class TTT implements GameState {
 		}
 	}
 	public Player getCurrentPlayer() {
-
+		if(!isGameOver) {
+			return this.whosMove;
+		}
 	}
 	public ArrayList<String> getCurrentMoves() {
 
