@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class TTT implements GameState {
 	public static int[][] board = new int[3][3];
 	static Player winner = null;
-	static Player Player1 = new Player();
-	static Player Player2 = new Player();
+	static Player Player1 = new Player("Player1");
+	static Player Player2 = new Player("Player2");
 	static Player whosMove = Player1;
 	public boolean isGameOver() {
 		for(int i = 0; i<board.length; i++) {
