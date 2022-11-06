@@ -55,12 +55,12 @@ public class TTT implements GameState {
 		return false;
 	}
 	public Player getWinner() {
-		if(isGameOver) {
+		if(isGameOver()) {
 			return this.winner;
 		}
 	}
 	public Player getCurrentPlayer() {
-		if(!isGameOver) {
+		if(!isGameOver()) {
 			return this.whosMove;
 		}
 	}
