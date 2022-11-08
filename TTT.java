@@ -9,16 +9,6 @@ public class TTT implements GameState {
 	private static Player whosMove = Player1;
 	public boolean isGameOver() {
 		for(int i = 0; i<board.length; i++) {
-			for(int j = 0; j<board[0].length; j++) {
-				if(board[i][j] == 0 && i==2 && j==2) {
-					return true;
-				}
-				if(board[i][j] != 0) {
-					break;
-				}
-			}
-		}
-		for(int i = 0; i<board.length; i++) {
 			if(board[i][0] == 1 && board[i][1] == 1 && board[i][2] == 1) {
 				winner = Player1;
 				return true;
