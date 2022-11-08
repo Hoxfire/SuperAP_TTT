@@ -28,9 +28,9 @@ public class GameDriver {
 		System.out.println(state);
 		while (!(state.isGameOver())) {
 			state.getCurrentPlayer();
-			System.out.println(state.getCurrentPlayer());
+			System.out.println(player.getName());
 			player.getNextMove(state);
-			System.out.println((state.getCurrentPlayer()).getNextMove(state);
+			System.out.println((state.getCurrentPlayer()).getNextMove(state));
 			state.makeMove((state.getCurrentPlayer()).getNextMove(state));
 			System.out.println(state);
 		}
