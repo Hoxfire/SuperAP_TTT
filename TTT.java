@@ -79,7 +79,7 @@ public class TTT implements GameState {
 		for(int[] i: board) {
 			s=s+"\n";
 			for(int j: i) {
-				s=s+j;
+				s=s+j+" ";
 			}
 		}
 		return s;
