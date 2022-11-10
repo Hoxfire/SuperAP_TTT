@@ -66,13 +66,14 @@ public class TTT implements GameState {
 		return valid;
 	}
 	public void makeMove(String move) {
-		/* make sure that whenever a certain player makes a move, it switches the variable whosMove to the opposite player
-		Ex:
-		If its players 1 turn, they move, then 
-		whosMove = Player2;
-		board[x][y] = 1 or 2
-		*/
+		int x = Integer.parseInt(move.substring(0,1));
+		int y = Integer.parseInt(move.substring(2,3));
 
+		if (whosMove=Player1) {
+			board[x-1][y-1]=1;
+		}else{
+			board[x-1][y-1]=2;
+		}
 	}
 	public String toString() {
 		String s = "";
