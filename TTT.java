@@ -2,11 +2,11 @@ import pkg.*;
 import java.util.ArrayList;
 
 public class TTT implements GameState {
-	private static int[][] board = new int[3][3];
-	private static Player winner = null;
-	private static Player Player1 = new Player("Player1");
-	private static Player Player2 = new Player("Player2");
-	private static Player whosMove = Player1;
+	public static int[][] board = new int[3][3];
+	//private static Player winner = null;
+	public static Player Player1 = new Player("x");
+	public static Player Player2 = new Player("o");
+	public static Player whosMove = Player1;
 	public boolean isGameOver() {
 		for(int i = 0; i<board.length; i++) {
 			if(board[i][0] == 1 && board[i][1] == 1 && board[i][2] == 1) {
