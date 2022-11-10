@@ -3,7 +3,13 @@ import java.util.ArrayList;
 
 public class TTT implements GameState {
 	public static int[][] board = new int[3][3];
-	private static Player winner;
+	import pkg.*;
+import java.util.ArrayList;
+
+public class TTT implements GameState {
+	public static int[][] board = new int[3][3];
+	//private static Player winner = null;
+	public static Player winner;
 	public static Player Player1 = new Player("x");
 	public static Player Player2 = new Player("o");
 	public static Player whosMove = Player1;
@@ -48,11 +54,13 @@ public class TTT implements GameState {
 		if(isGameOver()) {
 			return this.winner;
 		}
+		return null;
 	}
 	public Player getCurrentPlayer() {
 		if(!isGameOver()) {
 			return this.whosMove;
 		}
+		return null;
 	}
 	public ArrayList<String> getCurrentMoves() {
 		ArrayList<String> valid = new ArrayList<String>();
@@ -68,11 +76,12 @@ public class TTT implements GameState {
 	public void makeMove(String move) {
 		int x = Integer.parseInt(move.substring(0,1));
 		int y = Integer.parseInt(move.substring(2,3));
-
-		if (whosMove=Player1) {
+		if (whosMove == Player1) {
 			board[x-1][y-1]=1;
+			whosMove=Player2;
 		}else{
 			board[x-1][y-1]=2;
+			whosMove=Player1;
 		}
 	}
 	public String toString() {
