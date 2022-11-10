@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class TTT implements GameState {
 	public static int[][] board = new int[3][3];
-	//private static Player winner = null;
+	private static Player winner;
 	public static Player Player1 = new Player("x");
 	public static Player Player2 = new Player("o");
 	public static Player whosMove = Player1;
