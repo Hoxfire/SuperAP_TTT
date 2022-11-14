@@ -3,11 +3,6 @@ import java.util.ArrayList;
 
 public class TTT implements GameState {
 	public static int[][] board = new int[3][3];
-	import pkg.*;
-import java.util.ArrayList;
-
-public class TTT implements GameState {
-	public static int[][] board = new int[3][3];
 	//private static Player winner = null;
 	public static Player winner;
 	public static Player Player1 = new Player("x");
@@ -76,12 +71,15 @@ public class TTT implements GameState {
 	public void makeMove(String move) {
 		int x = Integer.parseInt(move.substring(0,1));
 		int y = Integer.parseInt(move.substring(2,3));
-		if (whosMove == Player1) {
-			board[x-1][y-1]=1;
-			whosMove=Player2;
-		}else{
-			board[x-1][y-1]=2;
-			whosMove=Player1;
+		if (board[x - 1][y - 1] == 0) {
+			if (whosMove == Player1) {
+				board[x-1][y-1]=1;
+				whosMove=Player2;
+			}
+			else{
+				board[x-1][y-1]=2;
+				whosMove=Player1;
+			}
 		}
 	}
 	public String toString() {
