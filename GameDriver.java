@@ -34,7 +34,7 @@ public class GameDriver {
 			move = er.readWord();
 			state.makeMove(move);
 		}
-		//System.out.println(state.getWinner().getName());
+		System.out.println(state);
 		if ((state.getWinner()).getName().equals("x")) {
 			System.out.println(player1 + " Wins!");
 		}
