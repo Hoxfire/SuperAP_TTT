@@ -24,11 +24,12 @@ public class GameDriver {
 	public void play() {
 		while (!(state.isGameOver())) {
 			System.out.println(state);
+			System.out.println("");
 			if ((state.getCurrentPlayer()).getName().equals("x")) {
-				System.out.println(player1);
+				System.out.println(player1 + "'s turn");
 			}
 			else {
-				System.out.println(player2);
+				System.out.println(player2 + "'s turn");
 			}
 			System.out.println("Make a move: ");
 			move = er.readWord();
