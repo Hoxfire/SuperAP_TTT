@@ -7,8 +7,10 @@ public class TTT implements GameState {
 	public static Player winner;
 	public static Player Player1 = new Player("x");
 	public static Player Player2 = new Player("o");
+	public static Player Player3 = new Player("loser");
 	public static Player whosMove = Player1;
 	public boolean isGameOver() {
+		int counter = 0;
 		for(int i = 0; i<board.length; i++) {
 			if(board[i][0] == 1 && board[i][1] == 1 && board[i][2] == 1) {
 				winner = Player1;
@@ -26,6 +28,17 @@ public class TTT implements GameState {
 				winner = Player2;
 				return true;
 			}
+		}
+		for (int row = 0; row < board.length; row++) {
+			for (int col = 0; col < board[0].length; col++) {
+				if (board[row][col] > 0) {
+					counter++;
+				}
+			}
+		}
+		if (counter == (board.length*board[0].length)) {
+			winner = Player3;
+			return true;
 		}
 		if(board[0][0] == 1 && board[1][1] == 1 && board[2][2] == 1) {
 			winner = Player1;
