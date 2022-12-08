@@ -44,6 +44,7 @@ public class GameDriver {
 		}
 		else {
 			System.out.println("Game ends in a draw");
+			play();
 		}
 
 	}
